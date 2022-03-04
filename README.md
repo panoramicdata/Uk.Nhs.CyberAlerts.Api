@@ -1,6 +1,8 @@
 # Uk.Nhs.CyberAlerts.Api
 A Nuget package for the UK NHS Cyber Alerts.
 
+[![Nuget](https://img.shields.io/nuget/v/Uk.Nhs.CyberAlerts.Api)](https://www.nuget.org/packages/Uk.Nhs.CyberAlerts.Api/)
+
 To use:
 
 ```C#
