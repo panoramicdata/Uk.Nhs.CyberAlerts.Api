@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Uk.Nhs.CyberAlerts.Api.Data
-{
+namespace Uk.Nhs.CyberAlerts.Api.Data;
+
 	[DataContract]
 	public class CyberAlert
 	{
@@ -76,4 +76,3 @@ namespace Uk.Nhs.CyberAlerts.Api.Data
 		[DataMember(Name = "summary")]
 		public string Summary { get; set; }
 	}
-}

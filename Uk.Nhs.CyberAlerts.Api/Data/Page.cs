@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Uk.Nhs.CyberAlerts.Api.Data
-{
+namespace Uk.Nhs.CyberAlerts.Api.Data;
+
 	[DataContract]
 	public class Page<T>
 	{
@@ -21,4 +21,3 @@ namespace Uk.Nhs.CyberAlerts.Api.Data
 		[DataMember(Name = "currentPage")]
 		public int CurrentPage { get; set; }
 	}
-}

@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+    <File Path="version.json" />
+  </Folder>
+  <Project Path="Uk.Nhs.CyberAlerts.Api.Test/Uk.Nhs.CyberAlerts.Api.Test.csproj" />
+  <Project Path="Uk.Nhs.CyberAlerts.Api/Uk.Nhs.CyberAlerts.Api.csproj" />
+</Solution>

@@ -1,32 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Company>Panoramic Data</Company>
-    <Authors>Panoramic Data Limited</Authors>
-    <Description>A nuget package for the UK NHS Cyber Alerts API.</Description>
-    <Copyright>Panoramic Data Limited 2020</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/panoramicdata/Uk.Nhs.CyberAlerts.Api</PackageProjectUrl>
-    <PackageIcon>Icon.png</PackageIcon>
-    <RepositoryUrl>https://github.com/panoramicdata/Uk.Nhs.CyberAlerts.Api</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>UK NHS Cyber Alerts</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Company>Panoramic Data</Company>
+		<Authors>Panoramic Data Limited</Authors>
+		<Description>A nuget package for the UK NHS Cyber Alerts API.</Description>
+		<Copyright>Panoramic Data Limited 2025</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/panoramicdata/Uk.Nhs.CyberAlerts.Api</PackageProjectUrl>
+		<PackageIcon>Icon.png</PackageIcon>
+		<RepositoryUrl>https://github.com/panoramicdata/Uk.Nhs.CyberAlerts.Api</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>UK NHS Cyber Alerts</PackageTags>
+		<PackageReleaseNotes>Initial release</PackageReleaseNotes>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.107">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="refit" Version="5.2.1" />
-  </ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="Exceptions\**" />
+	  <EmbeddedResource Remove="Exceptions\**" />
+	  <None Remove="Exceptions\**" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Nerdbank.GitVersioning" Version="3.9.50">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="refit" Version="9.0.2" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<None Remove="Icon.png" />

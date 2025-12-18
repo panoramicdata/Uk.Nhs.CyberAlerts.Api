@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Uk.Nhs.CyberAlerts.Api.Data
-{
+namespace Uk.Nhs.CyberAlerts.Api.Data;
+
 	[DataContract]
 	public class IndicatorsCompromise
 	{
@@ -31,4 +31,3 @@ namespace Uk.Nhs.CyberAlerts.Api.Data
 		[DataMember(Name = "content")]
 		public string Content { get; set; }
 	}
-}

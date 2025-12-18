@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Uk.Nhs.CyberAlerts.Api.Data
-{
+namespace Uk.Nhs.CyberAlerts.Api.Data;
+
 	[DataContract]
 	public class ThreatAffect
 	{
@@ -25,4 +25,3 @@ namespace Uk.Nhs.CyberAlerts.Api.Data
 		[DataMember(Name = "platformText")]
 		public string PlatformText { get; set; }
 	}
-}

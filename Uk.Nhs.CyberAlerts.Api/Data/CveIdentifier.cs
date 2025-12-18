@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Uk.Nhs.CyberAlerts.Api.Data
-{
+namespace Uk.Nhs.CyberAlerts.Api.Data;
+
 	[DataContract]
 	public class CveIdentifier
 	{
@@ -28,4 +28,3 @@ namespace Uk.Nhs.CyberAlerts.Api.Data
 		[DataMember(Name = "cveText")]
 		public string CveText { get; set; }
 	}
-}

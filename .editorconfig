@@ -1,0 +1,4 @@
+[*]
+
+# Tabs, not spaces
+indent_style = tab

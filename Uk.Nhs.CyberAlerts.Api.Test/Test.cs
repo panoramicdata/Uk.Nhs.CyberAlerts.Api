@@ -1,42 +1,40 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
-using Xunit.Abstractions;
+using System.Threading;
+using Xunit;
 
-namespace Uk.Nhs.CyberAlerts.Api.Test
+namespace Uk.Nhs.CyberAlerts.Api.Test;
+
+public abstract class Test(ITestOutputHelper testOutputHelper) : IDisposable
 {
-	public abstract class Test : IDisposable
+	private bool disposedValue;
+
+	protected ITestOutputHelper Output { get; } = testOutputHelper;
+
+	protected ILogger Logger { get; } = new XunitLoggerProvider(testOutputHelper, LogLevel.Debug)
+		.CreateLogger("Test");
+
+	protected static CancellationToken CancellationToken => TestContext.Current.CancellationToken;
+
+	public CyberAlertClient Client { get; } = new CyberAlertClient();
+
+	protected virtual void Dispose(bool disposing)
 	{
-		private bool disposedValue;
-
-		protected ILogger Logger { get; }
-
-		protected Test(ITestOutputHelper testOutputHelper)
+		if (!disposedValue)
 		{
-			Client = new CyberAlertClient();
-
-			Logger = testOutputHelper.BuildLogger();
-		}
-
-		public CyberAlertClient Client { get; }
-
-		protected virtual void Dispose(bool disposing)
-		{
-			if (!disposedValue)
+			if (disposing)
 			{
-				if (disposing)
-				{
-					Client.Dispose();
-				}
-
-				disposedValue = true;
+				Client.Dispose();
 			}
-		}
 
-		public void Dispose()
-		{
-			// Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
-			Dispose(disposing: true);
-			GC.SuppressFinalize(this);
+			disposedValue = true;
 		}
+	}
+
+	public void Dispose()
+	{
+		// Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+		Dispose(disposing: true);
+		GC.SuppressFinalize(this);
 	}
 }

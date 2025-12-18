@@ -3,8 +3,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Uk.Nhs.CyberAlerts.Api.Data;
 
-namespace Uk.Nhs.CyberAlerts.Api.Interfaces
-{
+namespace Uk.Nhs.CyberAlerts.Api.Interfaces;
+
 	public interface ICyberAlerts
 	{
 		/// <summary>
@@ -35,4 +35,3 @@ namespace Uk.Nhs.CyberAlerts.Api.Interfaces
 			CancellationToken cancellationToken = default
 			);
 	}
-}

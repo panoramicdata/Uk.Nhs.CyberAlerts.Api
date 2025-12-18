@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Uk.Nhs.CyberAlerts.Api.Data
-{
+namespace Uk.Nhs.CyberAlerts.Api.Data;
+
 	[DataContract]
 	public class Section
 	{
@@ -37,4 +37,3 @@ namespace Uk.Nhs.CyberAlerts.Api.Data
 		[DataMember(Name = "html")]
 		public string Html { get; set; }
 	}
-}
